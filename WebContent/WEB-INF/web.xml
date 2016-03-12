@@ -2,14 +2,22 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>LearnEnglishWords</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>index</welcome-file>
   </welcome-file-list>
   <servlet>
-  	<servlet-name>AuthUserServlet</servlet-name>
-  	<servlet-class>authentication.AuthUser</servlet-class>
+    <servlet-name>AuthUserServlet</servlet-name>
+    <servlet-class>authentication.AuthUserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>AuthUserServlet</servlet-name>
-  	<url-pattern>/auth</url-pattern>
+    <servlet-name>AuthUserServlet</servlet-name>
+    <url-pattern>/authenticate-user</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>IndexPageServlet</servlet-name>
+    <servlet-class>pages.IndexPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexPageServlet</servlet-name>
+    <url-pattern>/index</url-pattern>
   </servlet-mapping>
 </web-app>
