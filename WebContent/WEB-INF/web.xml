@@ -4,4 +4,12 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  <servlet>
+  	<servlet-name>AuthUserServlet</servlet-name>
+  	<servlet-class>authentication.AuthUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AuthUserServlet</servlet-name>
+  	<url-pattern>/auth</url-pattern>
+  </servlet-mapping>
 </web-app>
